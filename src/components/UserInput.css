@@ -1,0 +1,23 @@
+.hero{
+    min-height: 100vh;
+    background-image: url(../../assets/showcase.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: whitesmoke;
+}
+.scroller{
+    height: 20rem;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    
+}

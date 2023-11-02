@@ -1,0 +1,28 @@
+.header {
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: red;
+  font-weight: bolder;
+  padding-left: 1em;
+  font-family: monospace;
+  align-items: center;
+  height: 50px;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul li{
+    list-style: none;
+    font-size: 1.5rem;
+    margin-right: 2rem;
+}
+ul li:first-child{
+    color: yellow;
+}
+p {
+  display: block;
+}
