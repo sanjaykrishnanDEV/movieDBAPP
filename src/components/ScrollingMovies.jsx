@@ -1,12 +1,17 @@
+import { Link } from "react-router-dom";
 import React from "react";
 import "../components/ScrollingMovies.css";
 const ScrollingMovies = ({ data }) => {
   const details = data;
-  //console.log(details);
   return (
     <div className="cardy">
-      <img src={"https://image.tmdb.org/t/p/w500/" + details.poster_path} alt="sd"/>
-        <p>{details.original_title}</p>
+      <Link to={`/details/${data?.id}`}>
+        <img
+          src={"https://image.tmdb.org/t/p/w500/" + details?.poster_path}
+          alt="sd"
+        />
+        <p>{details?.original_title}</p>
+      </Link>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import {Link} from 'react-router-dom'
 import "../components/SearchMain.css";
 function SearchMain() {
   const [search, setSearch] = useState("");
@@ -30,7 +31,7 @@ function SearchMain() {
     <div className="main">
       <form onSubmit={(e) => e.preventDefault()}>
         <div>
-          <input type="radio" />
+          <input type="radio" checked="true"/>
           <label>Movies</label>
           <input type="radio" />
           <label>TV shows </label>
@@ -79,6 +80,8 @@ function SearchMain() {
 export default SearchMain;
 
 function DisplayArea({ movieData }) {
+  // console.log()
+
   return (
     <div className="displayarea">
       {movieData
@@ -91,11 +94,13 @@ function DisplayArea({ movieData }) {
 function Cards({ movie }) {
   return (
     <div className="card">
+      <Link to={`/details/${movie?.id}`}>
       <img
         src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path}
         alt="s"
       />
       <p>{movie.title}</p>
+      </Link>
     </div>
   );
 }

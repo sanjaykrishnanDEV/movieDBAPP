@@ -1,0 +1,27 @@
+.finite{
+    height: 100vh;display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    background-image: url(../../assets/showcase.jpg);
+    background-position: center;
+    color: whitesmoke;
+    font-family: monospace;
+    font-size: large;
+}
+.finite img{
+    /* margin-left: 8em;*/
+    height: 20em; 
+}
+.det{
+    width: 50%;
+}
+button{
+    padding: 10px;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 10px;
+    display: inline;
+
+}
