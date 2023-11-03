@@ -5,7 +5,7 @@ const ScrollingMovies = ({ data }) => {
   const details = data;
   return (
     <div className="cardy">
-      <Link to={`/details/${data?.id}`}>
+      <Link to={`/details/${data?.id}`} className="link">
         <img
           src={"https://image.tmdb.org/t/p/w500/" + details?.poster_path}
           alt="sd"

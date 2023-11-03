@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 import "../components/SearchMain.css";
 function SearchMain() {
   const [search, setSearch] = useState("");
@@ -31,7 +31,7 @@ function SearchMain() {
     <div className="main">
       <form onSubmit={(e) => e.preventDefault()}>
         <div>
-          <input type="radio" checked="true"/>
+          <input type="radio" checked="true" />
           <label>Movies</label>
           <input type="radio" />
           <label>TV shows </label>
@@ -92,14 +92,20 @@ function DisplayArea({ movieData }) {
 }
 
 function Cards({ movie }) {
+  
+  // let bg_img={
+  //   backgroundImg:"url(" +"https://image.tmdb.org/t/p/w500/ " + {movie.backdrop_path } + ")"
+  //   // backdrop_path
+  // }
+  console.log(movie.backdrop_path)
   return (
-    <div className="card">
-      <Link to={`/details/${movie?.id}`}>
-      <img
-        src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path}
-        alt="s"
-      />
-      <p>{movie.title}</p>
+    <div className="card" >
+      <Link to={`/details/${movie?.id}`} className="link">
+        <img
+          src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path}
+          alt="s"
+        />
+        <p>{movie.title}</p>
       </Link>
     </div>
   );

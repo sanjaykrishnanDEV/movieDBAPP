@@ -8,7 +8,7 @@ const Header = () => {
       <span>FlixNet</span>
       <ul>
         <li>
-          <Link to="/movies">
+          <Link to="/movies" className="link">
             <p>Movies</p>
           </Link>
         </li>
